@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Cloned</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/3a884597e7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white" style="font-family: Open sans">
+    <div class="bg-black text-white flex px-2 py-2 justify-between font-bold">
+      <div
+        class="main-container flex-row min-w-min w-1/4 px-0 py-0 mr-2 rounded"
+      >
+        <div class="mb-2 rounded-lg" style="background-color: rgb(16, 16, 16)">
+          <nav>
+            <ul>
+              <li class="uppernav flex items-center pl-6 pb-5 pt-5">
+                <a href="https://open.spotify.com/" target="_parent">
+                  <img
+                  class="w-20"
+                  src="Images/spotify-icon-removebg-preview.png"
+                  alt=""
+                />
+                </a>
+              </li>
+              <li class="uppernav flex items-center pl-6 pb-5 font-bold mt-1">
+                <i class="fa-solid fa-house fa-lg mr-2"></i>
+                <p class="text-sm pl-3">Home</p>
+              </li>
+              <li class="uppernav flex items-center pl-6 pb-5 font-bold mt-2">
+                <i class="fa-solid fa-magnifying-glass fa-lg mr-2"></i>
+                <p class="text-sm pl-3">Search</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          class="rounded-lg py-2 flex-row pb-0"
+          style="background-color: rgb(16, 16, 16)"
+        >
+          <div class="mt-2 pl-3 px-2 flex items-center">
+            <img class="w-8 mr-2" src="Images/lib.png" alt="" />
+            <p class="pr-20">Your Library</p>
+            <i class="fa-sharp fa-light fa-plus fa-lg pr-2 mr-4"></i>
+            <i class="fa-solid fa-arrow-right pr-2"></i>
+          </div>
+          <div class="mt-3 pl-2 text-sm font-semibold">
+            <button
+              class="bg-zinc-800 opacity-80 mt-2 mr-2 px-3 py-1 rounded-full"
+            >
+              Playists
+            </button>
+            <button
+              class="bg-zinc-800 opacity-80 mt-2 mr-2 px-3 py-1 rounded-full"
+            >
+              Artists
+            </button>
+            <button
+              class="bg-zinc-800 opacity-80 mt-2 mr-2 px-3 py-1 rounded-full"
+            >
+              Albums
+            </button>
+          </div>
+          <div
+            class="recent-container flex items-center justify-between ml-4 mr-2 mt-5"
+          >
+            <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+            <div class="flex items-center">
+              <p class="text-xs font-normal">Recents</p>
+              <i class="fa-solid fa-bars fa-sm mx-2 items-center"></i>
+            </div>
+          </div>
+          <div
+            class="scroller-1 overflow-scroll scroll-smooth h-56 flex-row mt-4 items-center"
+          >
+            <div
+              class="flex bg-white bg-opacity-5 hover:bg-slate-700 items-center hover:cursor-wait hover:bg-opacity-10 px-4 py-2"
+            >
+              <div class="container-lib mr-3 w-14 h-14">
+                <img class="rounded-md" src="Images/liked-songs.png" alt="" />
+              </div>
+              <div>
+                <div>Liked Songs</div>
+                <div class="text-xs font-semibold opacity-40">
+                  Playlist &#x25Cf; 10 songs
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex hover:bg-slate-700 items-center hover:cursor-wait hover:bg-opacity-10 px-4 py-2"
+            >
+              <div class="container-lib w-14 h-14 mr-3">
+                <img class="rounded-lg" src="Images/404 error.webp" alt="" />
+              </div>
+              <div>
+                <div>Cannot Access</div>
+                <div class="text-xs font-semibold opacity-40">
+                  Playlist &#x25Cf; err404
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex hover:bg-slate-700 items-center hover:cursor-wait hover:bg-opacity-10 px-4 py-2"
+            >
+              <div class="container-lib w-14 h-14 mr-3">
+                <img src="Images/aceofbase" class="rounded-full" alt="" />
+              </div>
+              <div>
+                <div>Ace of Base</div>
+                <div class="text-xs font-semibold opacity-40">Artist</div>
+              </div>
+            </div>
+            <div
+              class="flex hover:bg-slate-700 items-center hover:cursor-wait hover:bg-opacity-10 px-4 py-2"
+            >
+              <div class="container-lib w-14 h-14 mr-3">
+                <img class="rounded-lg" src="Images/pochita.jpg" alt="" />
+              </div>
+              <div>
+                <div>Anime Beats</div>
+                <div class="text-xs font-semibold opacity-40">
+                  Playlist &#x25Cf; kyou
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex hover:bg-slate-700 items-center hover:cursor-wait hover:bg-opacity-10 px-4 py-2"
+            >
+              <div class="container-lib w-14 h-14 mr-3">
+                <img class="rounded-full" src="Images/Covers/4.jpg" alt="" />
+              </div>
+              <div>
+                <div>YOASOBI</div>
+                <div class="text-xs font-semibold opacity-40">Artist</div>
+              </div>
+            </div>
+            <div
+              class="flex hover:bg-slate-700 items-center hover:cursor-wait hover:bg-opacity-10 px-4 py-2"
+            >
+              <div class="container-lib w-14 h-14 mr-3">
+                <img class="rounded-lg" src="Images/abba.jpg" alt="" />
+              </div>
+              <div>
+                <div>Super Trouper</div>
+                <div class="text-xs font-semibold opacity-40">
+                  Playlist &#x25Cf; ABBA
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="main-container w-2/4 min-w-max rounded-lg mr-2"
+        style="
+          background: linear-gradient(
+            180deg,
+            rgba(121, 81, 241, 0.63) 0%,
+            rgba(12, 12, 12, 1) 100%
+          );
+        "
+      >
+        <div class="rounded-t-lg">
+          <div
+            class="upper-section flex h-10 mx-4 my-4 items-center justify-between"
+          >
+            <div>
+              <i
+                class="fa-solid fa-circle-chevron-left fa-2xl mr-1"
+                style="color: rgba(0, 0, 0, 0.584)"
+              ></i>
+              <i
+                class="fa-solid fa-circle-chevron-right fa-2xl"
+                style="color: rgba(0, 0, 0, 0.584)"
+              ></i>
+            </div>
+            <div class="flex">
+              <a href="https://www.spotify.com/us/download/windows/" target="_parent">
+                <button
+                class="px-2 py-1 mr-2 flex items-center text-xs bg-black bg-opacity-50 rounded-full"
+              >
+                <img
+                  class="mr-1 size-4"
+                  src="Images/install.png"
+                  alt=""
+                />Install App
+              </button>
+              </a>
+              <div
+                class="bg-black mr-2 bg-opacity-50 size-7 items-center flex justify-center rounded-full"
+              >
+                <i class="fa-regular fa-bell"></i>
+              </div>
+              <div
+                class="bg-black bg-opacity-50 size-7 items-center flex justify-center rounded-full"
+              >
+                <img class="size-5 rounded-full" src="Images/ct.webp" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="middle-section mt-14 mx-4 flex mb-5">
+            <div>
+              <img
+                class="size-28 rounded-sm shadow-2xl shadow-black"
+                src="Images/liked-songs.png"
+                alt=""
+              />
+            </div>
+            <div class="ml-4">
+              <div class="text-xs font-medium">Playlist</div>
+              <div class="text-7xl">Liked Songs</div>
+              <div class="flex text-xs font-normal items-center">
+                <div
+                  class="size-7 bg-black bg-opacity-40 mr-2 flex items-center justify-center rounded-full"
+                >
+                  <img
+                    class="rounded-full size-5"
+                    src="Images/ct.webp"
+                    alt=""
+                  />
+                </div>
+                Anoop &#x25CF; 10 songs
+              </div>
+            </div>
+          </div>
+          <div
+            class="lower-section rounded-b-lg mt-6"
+            style="
+              background: linear-gradient(
+                180deg,
+                rgba(20, 12, 44, 0.374) 0%,
+                rgba(12, 12, 12, 0.6439367983521533) 50%,
+                rgba(0, 0, 0, 1) 100%
+              );
+            "
+          >
+            <div
+              class="playbutton-container flex items-center justify-between mx-4 py-4 mb-1"
+            >
+              <img
+                id="masterPlayGreen"
+                class="hover:cursor-pointer"
+                src="Images/play.png"
+                alt=""
+              />
+              <div class="font-normal text-sm">
+                List <i class="fa-solid fa-bars fa-sm mx-2 items-center"></i>
+              </div>
+            </div>
+            <div class="overflow-scroll scroll-smooth h-52">
+              <div
+                class="basis font-bold pb-2 text-sm text-gray-400 flex border-b border-gray-700 mx-4"
+              >
+                <div class="px-4">#</div>
+                <div class="pr-72">Title</div>
+                <div class="pr-32 mr-1">Album</div>
+                <div><i class="fa-regular fa-clock fa-sm"></i></div>
+              </div>
+              <div
+                id="0"
+                onclick="greenTextEqualizer0()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers0" class="ml-2 songNumber"></div>
+                <div id="0" class="ml-2 flex">
+                  <div id="0">
+                    <img id="0" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div class="pl-3" id="0">
+                    <div id="0" class="songName"></div>
+                    <div id="0" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="0" class="ml-2 text-xs albumName"></div>
+                <div id="0" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="1"
+                onclick="greenTextEqualizer1()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers1" class="ml-2 songNumber"></div>
+                <div id="1" class="ml-2 flex">
+                  <div id="1">
+                    <img id="1" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="1" class="pl-3">
+                    <div id="1" class="songName"></div>
+                    <div id="1" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="1" class="ml-2 text-xs albumName"></div>
+                <div id="1" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="2"
+                onclick="greenTextEqualizer2()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers2" class="ml-2 songNumber"></div>
+                <div id="2" class="ml-2 flex">
+                  <div id="2">
+                    <img id="2" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="2" class="pl-3">
+                    <div id="2" class="songName"></div>
+                    <div id="2" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="2" class="ml-2 text-xs albumName"></div>
+                <div id="2" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="3"
+                onclick="greenTextEqualizer3()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers3" class="ml-2 songNumber"></div>
+                <div id="3" class="ml-2 flex">
+                  <div id="3">
+                    <img id="3" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="3" class="pl-3">
+                    <div id="3" class="songName"></div>
+                    <div id="3" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="3" class="ml-2 text-xs albumName"></div>
+                <div id="3" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="4"
+                onclick="greenTextEqualizer4()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers4" class="ml-2 songNumber"></div>
+                <div id="4" class="ml-2 flex">
+                  <div id="4">
+                    <img id="4" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="4" class="pl-3">
+                    <div id="4" class="songName"></div>
+                    <div id="4" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="4" class="ml-2 text-xs albumName"></div>
+                <div id="4" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="5"
+                onclick="greenTextEqualizer5()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers5" class="ml-2 songNumber"></div>
+                <div id="5" class="ml-2 flex">
+                  <div id="5">
+                    <img id="5" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="5" class="pl-3">
+                    <div id="5" class="songName"></div>
+                    <div id="5" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="5" class="ml-2 text-xs albumName"></div>
+                <div id="5" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="6"
+                onclick="greenTextEqualizer6()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers6" class="ml-2 songNumber"></div>
+                <div id="6" class="ml-2 flex">
+                  <div id="6">
+                    <img id="6" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="6" class="pl-3">
+                    <div id="6" class="songName"></div>
+                    <div id="6" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="6" class="ml-2 text-xs albumName"></div>
+                <div id="6" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="7"
+                onclick="greenTextEqualizer7()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers7" class="ml-2 songNumber"></div>
+                <div id="7" class="ml-2 flex">
+                  <div id="7">
+                    <img id="7" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="7" class="pl-3">
+                    <div id="7" class="songName"></div>
+                    <div id="7" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="7" class="ml-2 text-xs albumName"></div>
+                <div id="7" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="8"
+                onclick="greenTextEqualizer8()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers8" class="ml-2 songNumber"></div>
+                <div id="8" class="ml-2 flex">
+                  <div id="8">
+                    <img id="8" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="8" class="pl-3">
+                    <div id="8" class="songName"></div>
+                    <div id="8" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="8" class="ml-2 text-xs albumName"></div>
+                <div id="8" class="ml-2 songDuration"></div>
+              </div>
+              <div
+                id="9"
+                onclick="greenTextEqualizer9()"
+                class="hover:cursor-pointer gridElement px-5 mt-2 py-2 items-center font-semibold text-sm text-gray-400 hover:bg-slate-700 hover:bg-opacity-15"
+                style="
+                  display: grid;
+                  grid-template-columns: 27px 320px 177px 45px;
+                "
+              >
+                <div id="equalizers9" class="ml-2 songNumber"></div>
+                <div id="9" class="ml-2 flex">
+                  <div id="9">
+                    <img id="9" class="size-11 rounded-md" src="" alt="" />
+                  </div>
+                  <div id="9" class="pl-3">
+                    <div id="9" class="songName"></div>
+                    <div id="9" class="artistName text-xs"></div>
+                  </div>
+                </div>
+                <div id="9" class="ml-2 text-xs albumName"></div>
+                <div id="9" class="ml-2 songDuration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="main-container w-1/4 min-w-min rounded-lg px-4 pt-4 pb-0"
+        style="background-color: rgb(16, 16, 16)"
+      >
+        <div class="upnav flex items-center justify-between py-2">
+          <div class="pb-3">Liked Songs</div>
+          <div>
+            <i class="fa-solid fa-ellipsis pr-5" style="color: #ffffff84"></i>
+            <i class="fa-solid fa-xmark pr-4" style="color: #ffffff84"></i>
+          </div>
+        </div>
+        <div
+          class="scroller overflow-scroll scroll-smooth pb-0 mb-0"
+          style="height: 474px"
+        >
+          <div
+            id="js-music-cover-big"
+            class="items-center flex justify-center mt-3"
+          >
+            <img
+              id="rightMusicCover"
+              class="size-2 rounded-lg"
+              src="Images/Covers/1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div>
+              <div id="rightMusicName" class="text-2xl">絆ノ奇跡</div>
+              <div id="rightaArtistName" class="opacity-50">
+                MAN WITH A MISSION, milet
+              </div>
+            </div>
+            <div>
+              <i
+                class="fa-solid fa-circle-check fa-lg"
+                style="color: #1ed760"
+              ></i>
+            </div>
+          </div>
+          <div
+            class="artist-container mt-5 rounded-lg"
+            style="background-color: rgb(34, 34, 34)"
+          >
+            <div
+              class="rounded-t-lg"
+            >
+            <img id="aboutTheArtistImage" class=" rounded-t-lg" src="Images/Artist/1.jpg"  alt="">
+            </div>
+            <div>
+              <div id="rightaArtistName2" class="px-4 py-3">
+                MAN WITH A MISSION
+              </div>
+              <div class="flex items-center justify-between pr-3">
+                <div class="px-4 text-sm font-normal">
+                  <div class="">
+                    <span id="monthlyListeners">2,065,875</span> monthly
+                  </div>
+                  <div class="">listeners</div>
+                </div>
+                <div>
+                  <button
+                    class="border rounded-full text-sm py-2 px-5 border-gray-500 hover:bg-slate-500 hover:bg-opacity-15"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div id="creditsAbout" class="px-4 text-sm mt-3 font-medium pb-4 text-gray-300">
+                In the year 19XX the earth was engulfed in war. There lived a
+                genius biologist named Dr. Jimi...
+              </div>
+            </div>
+          </div>
+          <div
+            class="credits-container mt-5 rounded-lg px-4 py-4"
+            style="background-color: rgb(34, 34, 34)"
+          >
+            <div class="flex items-center justify-between">
+              <div>Credits</div>
+              <div class="font-semibold text-xs">Show all</div>
+            </div>
+            <div class="artist-credit flex items-center justify-between">
+              <div class="pt-4">
+                <div id="creditsMainArtist" class="font-medium">
+                  MAN WITH A MISSION
+                </div>
+                <div class="text-xs pt-1">Main Artist, Arranger</div>
+              </div>
+              <div>
+                <button
+                  class="border rounded-full text-sm py-2 px-5 border-gray-500 hover:bg-slate-500 hover:bg-opacity-15"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+            <div class="artist-credit flex items-center justify-between">
+              <div class="pt-4">
+                <div id="creditsMainArtist2" class="font-medium">milet</div>
+                <div class="text-xs pt-1">Main Artist</div>
+              </div>
+              <div>
+                <button
+                  class="border rounded-full text-sm py-2 px-5 border-gray-500 hover:bg-slate-500 hover:bg-opacity-15"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+            <div class="artist-credit flex items-center justify-between">
+              <div class="pt-4">
+                <div id="creditsComposer" class="font-medium">
+                  Jean-Ken Johnny
+                </div>
+                <div class="text-xs pt-1">Composer, Lyricist</div>
+              </div>
+              <div>
+                <button
+                  class="border rounded-full text-sm py-2 px-5 border-gray-500 hover:bg-slate-500 hover:bg-opacity-15"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="queue-container mt-5 rounded-lg px-4 py-4 mb-5"
+            style="background-color: rgb(34, 34, 34)"
+          >
+            <div class="flex items-center justify-between mb-5">
+              <div>Next in queue</div>
+              <div class="font-semibold text-xs">Open queue</div>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3">
+                <i
+                  class="fa-solid fa-music fa-2xs"
+                  style="color: #ffffff85"
+                ></i>
+              </div>
+              <div class="mr-3 size-12">
+                <img
+                  id="queueSongCover"
+                  class="size-12 rounded-lg mr-2"
+                  src="Images/Covers/2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-40">
+                <div id="queueSongName" class="overflow-hidden">
+                  BROKEN GAMES
+                </div>
+                <div id="queueSongArtist" class="text-xs opacity-85">FZMZ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="conrols bg-black flex fixed bottom-0 left-0 right-0 px-6 justify-between items-center"
+      style="height: 92px"
+    >
+      <div class="left-song flex items-center w-72">
+        <div>
+          <img
+            id="jsMusicCover"
+            class="size-14 rounded"
+            src="Images/Covers/1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="flex items-center">
+          <div class="ml-5">
+            <div class="text-sm font-normal" id="jsMusicSong" style="color: #1ed760;">
+              絆ノ奇跡
+            </div>
+            <div class="text-xs pt-1 font-medium opacity-60" id="jsMusicArtist">
+              MAN WITH A MISSION, milet
+            </div>
+          </div>
+          <div class="ml-4">
+            <i class="fa-solid fa-circle-check" style="color: #1ed760"></i>
+          </div>
+        </div>
+      </div>
+      <div class="controls flex-row items-center justify-center">
+        <div class="flex items-center justify-center">
+          <i class="fa-solid fa-shuffle mr-8" style="color: #1ed760"></i>
+          <i
+            class="fa-solid fa-backward-step fa-lg mr-8 hover:cursor-pointer"
+            style="color: #ffffff"
+            id="previous"
+          ></i>
+          <i
+            class="fa-solid fa-circle-play transition delay-1000 fa-2xl mr-8 hover:cursor-pointer"
+            id="masterPlay"
+          ></i>
+          <i
+            class="fa-solid fa-forward-step fa-lg mr-8 hover:cursor-pointer"
+            style="color: #ffffff"
+            id="next"
+          ></i>
+          <img class="size-5" src="Images/replay.png" alt="" />
+        </div>
+        <div class="flex text-xs items-center mt-5">
+          <div id="js-time-stamp" class="mx-2">0:00</div>
+          <input
+            id="myProgressBar"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="0"
+            class="playbar h-1 w-96 slider"
+            style="accent-color: #1ed760"
+          />
+          <div id="songTimerEnd" class="mx-2">3:43</div>
+        </div>
+      </div>
+      <div class="pl-1 flex items-center justify-between">
+        <img class="w-10 pt-2 pr-4" src="Images/nowplaying.png" alt="" />
+        <i class="fa-solid fa-bars-staggered pr-4" style="color: #ffffff"></i>
+        <i class="fa-solid fa-desktop pr-4" style="color: #ffffff"></i>
+        <div class="size-2 flex items-center pr-5 pl-3 justify-center">
+          <i
+            id="volumeIcon"
+            class="fa-solid fa-volume-high fa-sm"
+            style="color: #ffffff"
+          ></i>
+        </div>
+        <input
+          id="masterVolume"
+          class="slider h-1 w-20 mr-2"
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+          style="accent-color: #1ed760"
+        />
+        <img class="w-10 pr-4" src="Images/miniplayer (1).png" alt="" />
+        <i
+          class="fa-solid fa-up-right-and-down-left-from-center"
+          style="color: #ffffff"
+        ></i>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
