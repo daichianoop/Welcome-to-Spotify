@@ -28,7 +28,7 @@
       <div
         class="main-container flex-row min-w-min w-1/4 px-0 py-0 mr-2 rounded"
       >
-        <div class="mb-2 rounded-lg" style="background-color: rgb(16, 16, 16)">
+        <div class="mb-2 rounded-lg" style="background-color: rgb(12, 12, 12)">
           <nav>
             <ul>
               <li class="uppernav flex items-center pl-6 pb-5 pt-5">
@@ -53,13 +53,18 @@
         </div>
         <div
           class="rounded-lg py-2 flex-row pb-0"
-          style="background-color: rgb(16, 16, 16)"
+          style="background-color: rgb(12, 12, 12)"
         >
-          <div class="mt-2 pl-3 px-2 flex items-center">
-            <img class="w-8 mr-2" src="Images/lib.png" alt="" />
-            <p class="pr-20">Your Library</p>
+          <div class="mt-2 pl-3 px-2 flex items-center justify-between">
+            <div class="flex items-center">
+              <img class="w-8 mr-2" src="Images/lib.png" alt="" />
+              <p class="">Your Library</p>
+            </div>
+           <div class="flex items-center">
             <i class="fa-sharp fa-light fa-plus fa-lg pr-2 mr-4"></i>
             <i class="fa-solid fa-arrow-right pr-2"></i>
+           </div>
+            
           </div>
           <div class="mt-3 pl-2 text-sm font-semibold">
             <button
@@ -498,8 +503,9 @@
         </div>
       </div>
       <div
+      id="canvas"
         class="main-container w-1/4 min-w-min rounded-lg px-4 pt-4 pb-0"
-        style="background-color: rgb(16, 16, 16)"
+        style="background-color: rgb(12, 12, 12)"
       >
         <div class="upnav flex items-center justify-between py-2">
           <div class="pb-3">Liked Songs</div>
