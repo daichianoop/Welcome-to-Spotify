@@ -236,6 +236,9 @@ masterPlayGreen.addEventListener("click", () => {
     masterPlay.classList.remove("fa-circle-play");
     masterPlay.classList.add("fa-circle-pause");
     masterPlayGreen.src = `Images/pause.png`;
+    document.getElementById("0").style.color = "#1ed760";
+    document.getElementById("equalizers0").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
   } else {
     audioElement.pause();
     masterPlay.classList.remove("fa-circle-pause");
@@ -304,6 +307,7 @@ Array.from(document.getElementsByClassName("gridElement")).forEach(
       masterPlay.classList.remove("fa-circle-play");
       masterPlay.classList.add("fa-circle-pause");
       masterPlayGreen.src = `Images/pause.png`;
+      songNumber.innerHTML = `<img class="size-5" src="Images/equaizerr.gif" alt="">`;
     });
   }
 );
@@ -321,6 +325,7 @@ document.getElementById("next").addEventListener("click", () => {
   masterPlay.classList.remove("fa-circle-play");
   masterPlay.classList.add("fa-circle-pause");
   masterPlayGreen.src = `Images/pause.png`;
+  passingPlayingGreen();
 });
 
 document.getElementById("previous").addEventListener("click", () => {
@@ -336,6 +341,7 @@ document.getElementById("previous").addEventListener("click", () => {
   masterPlay.classList.remove("fa-circle-play");
   masterPlay.classList.add("fa-circle-pause");
   masterPlayGreen.src = `Images/pause.png`;
+  passingPlayingGreen();
 });
 
 // Creating masterVolume
@@ -355,85 +361,118 @@ masterVolume.addEventListener("change", () => {
   }
 });
 {
-function greenTextEqualizerReset() {
-  document.getElementById("0").style.color = "rgb(156,163,175 )";
-  document.getElementById("1").style.color = "rgb(156,163,175 )";
-  document.getElementById("2").style.color = "rgb(156,163,175 )";
-  document.getElementById("3").style.color = "rgb(156,163,175 )";
-  document.getElementById("4").style.color = "rgb(156,163,175 )";
-  document.getElementById("5").style.color = "rgb(156,163,175 )";
-  document.getElementById("6").style.color = "rgb(156,163,175 )";
-  document.getElementById("7").style.color = "rgb(156,163,175 )";
-  document.getElementById("8").style.color = "rgb(156,163,175 )";
-  document.getElementById("9").style.color = "rgb(156,163,175 )";
-  document.getElementById("equalizers0").innerHTML = '1';
-  document.getElementById("equalizers1").innerHTML = '2';
-  document.getElementById("equalizers2").innerHTML = '3';
-  document.getElementById("equalizers3").innerHTML = '4';
-  document.getElementById("equalizers4").innerHTML = '5';
-  document.getElementById("equalizers5").innerHTML = '6';
-  document.getElementById("equalizers6").innerHTML = '7';
-  document.getElementById("equalizers7").innerHTML = '8';
-  document.getElementById("equalizers8").innerHTML = '9';
-  document.getElementById("equalizers8").innerHTML = '10';
+  function greenTextEqualizerReset() {
+    document.getElementById("0").style.color = "rgb(156,163,175 )";
+    document.getElementById("1").style.color = "rgb(156,163,175 )";
+    document.getElementById("2").style.color = "rgb(156,163,175 )";
+    document.getElementById("3").style.color = "rgb(156,163,175 )";
+    document.getElementById("4").style.color = "rgb(156,163,175 )";
+    document.getElementById("5").style.color = "rgb(156,163,175 )";
+    document.getElementById("6").style.color = "rgb(156,163,175 )";
+    document.getElementById("7").style.color = "rgb(156,163,175 )";
+    document.getElementById("8").style.color = "rgb(156,163,175 )";
+    document.getElementById("9").style.color = "rgb(156,163,175 )";
+    document.getElementById("equalizers0").innerHTML = "1";
+    document.getElementById("equalizers1").innerHTML = "2";
+    document.getElementById("equalizers2").innerHTML = "3";
+    document.getElementById("equalizers3").innerHTML = "4";
+    document.getElementById("equalizers4").innerHTML = "5";
+    document.getElementById("equalizers5").innerHTML = "6";
+    document.getElementById("equalizers6").innerHTML = "7";
+    document.getElementById("equalizers7").innerHTML = "8";
+    document.getElementById("equalizers8").innerHTML = "9";
+    document.getElementById("equalizers8").innerHTML = "10";
+  }
+  function greenTextEqualizer0() {
+    greenTextEqualizerReset();
+    document.getElementById("0").style.color = "#1ed760";
+    document.getElementById("equalizers0").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer1() {
+    greenTextEqualizerReset();
+    document.getElementById("1").style.color = "#1ed760";
+    document.getElementById("equalizers1").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer2() {
+    greenTextEqualizerReset();
+    document.getElementById("2").style.color = "#1ed760";
+    document.getElementById("equalizers2").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer3() {
+    greenTextEqualizerReset();
+    document.getElementById("3").style.color = "#1ed760";
+    document.getElementById("equalizers3").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer4() {
+    greenTextEqualizerReset();
+    document.getElementById("4").style.color = "#1ed760";
+    document.getElementById("equalizers4").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer5() {
+    greenTextEqualizerReset();
+    document.getElementById("5").style.color = "#1ed760";
+    document.getElementById("equalizers5").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer6() {
+    greenTextEqualizerReset();
+    document.getElementById("6").style.color = "#1ed760";
+    document.getElementById("equalizers6").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer7() {
+    greenTextEqualizerReset();
+    document.getElementById("7").style.color = "#1ed760";
+    document.getElementById("equalizers7").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer8() {
+    greenTextEqualizerReset();
+    document.getElementById("8").style.color = "#1ed760";
+    document.getElementById("equalizers8").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
+  function greenTextEqualizer9() {
+    greenTextEqualizerReset();
+    document.getElementById("9").style.color = "#1ed760";
+    document.getElementById("equalizers9").innerHTML =
+      '<img class="size-4" src="Images/equaizerr.gif" alt="">';
+  }
 }
-function greenTextEqualizer0() {
-  greenTextEqualizerReset();
-  document.getElementById("0").style.color = "#1ed760";
-  document.getElementById("equalizers0").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-}
-function greenTextEqualizer1() {
-  greenTextEqualizerReset();
-  document.getElementById("1").style.color = "#1ed760";
-  document.getElementById("equalizers1").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer2() {
-  greenTextEqualizerReset();
-  document.getElementById("2").style.color = "#1ed760";
-  document.getElementById("equalizers2").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer3() {
-  greenTextEqualizerReset();
-  document.getElementById("3").style.color = "#1ed760";
-  document.getElementById("equalizers3").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer4() {
-  greenTextEqualizerReset();
-  document.getElementById("4").style.color = "#1ed760";
-  document.getElementById("equalizers4").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer5() {
-  greenTextEqualizerReset();
-  document.getElementById("5").style.color = "#1ed760";
-  document.getElementById("equalizers5").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer6() {
-  greenTextEqualizerReset();
-  document.getElementById("6").style.color = "#1ed760";
-  document.getElementById("equalizers6").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer7() {
-  greenTextEqualizerReset();
-  document.getElementById("7").style.color = "#1ed760";
-  document.getElementById("equalizers7").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer8() {
-  greenTextEqualizerReset();
-  document.getElementById("8").style.color = "#1ed760";
-  document.getElementById("equalizers8").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
-function greenTextEqualizer9() {
-  greenTextEqualizerReset();
-  document.getElementById("9").style.color = "#1ed760";
-  document.getElementById("equalizers9").innerHTML = '<img class="size-4" src="Images/equaizerr.gif" alt="">';
-
-}
+function passingPlayingGreen() {
+  if (songIndex == 0) {
+    greenTextEqualizer0();
+  }
+  if (songIndex == 1) {
+    greenTextEqualizer1();
+  }
+  if (songIndex == 2) {
+    greenTextEqualizer2();
+  }
+  if (songIndex == 3) {
+    greenTextEqualizer3();
+  }
+  if (songIndex == 4) {
+    greenTextEqualizer4();
+  }
+  if (songIndex == 5) {
+    greenTextEqualizer5();
+  }
+  if (songIndex == 6) {
+    greenTextEqualizer6();
+  }
+  if (songIndex == 7) {
+    greenTextEqualizer7();
+  }
+  if (songIndex == 8) {
+    greenTextEqualizer8();
+  }
+  if (songIndex == 9) {
+    greenTextEqualizer9();
+  }
 }
