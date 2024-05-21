@@ -381,7 +381,7 @@ masterVolume.addEventListener("change", () => {
     document.getElementById("equalizers6").innerHTML = "7";
     document.getElementById("equalizers7").innerHTML = "8";
     document.getElementById("equalizers8").innerHTML = "9";
-    document.getElementById("equalizers8").innerHTML = "10";
+    document.getElementById("equalizers9").innerHTML = "10";
   }
   function greenTextEqualizer0() {
     greenTextEqualizerReset();
